@@ -1,0 +1,84 @@
+      .standard-margin{
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      .page-title{
+        height: 500px;
+      }
+
+
+      .name-Noah{
+        font-family: 'Roboto';
+        font-size: 108px;
+        font-weight: 900;
+      }
+
+      .title{
+        font-family: 'Roboto';
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+      .project-showcase{
+        padding-bottom:20px;
+      }
+
+      .image-showcase{
+        max-width:100%;
+        max-height:100%;
+        margin: auto;
+        display: block;
+
+       }
+
+       .menu-bar{
+        padding-bottom:20px;
+       }
+
+	    body {
+			width: 10000px;
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		}
+
+		.panel {
+			width: 2000px;
+			float: left;
+			padding-left: 30px;
+			padding-right: 1040px;
+			padding-top:45px;
+			background: #eee;
+		}
+
+		#banner {
+		  position: fixed;
+		}
+
+		#banner ul {
+		  line-height:45px;
+		  margin: 0 30px;
+		  padding: 0;
+		}
+
+		#banner ul li {
+		   display: inline;
+		   margin-right: 20px;
+		   color: black;
+		}
+
+		.navbar{
+		  z-index: 9999;
+		  background: #eee;
+		  width: 100%;
+		}
+
+		.spacer{
+		    height: 50px;
+		}
+
+		a {
+		    color:black;
+		    font-weight: bold;
+		}

@@ -7,11 +7,26 @@
         height: 500px;
       }
 
+      .home-button {
+        padding-left: 50px;
+      }
+
 
       .name-Noah{
         font-family: 'Roboto';
-        font-size: 108px;
+        font-size: 120px;
         font-weight: 900;
+      }
+
+      .name-section {
+        font-family: 'Roboto';
+        font-size: 175px;
+        font-weight: 900;
+      }
+
+      .mid-column {
+        padding-top: 100px;
+        padding-bottom: 100px;
       }
 
       .title{
@@ -43,13 +58,22 @@
 			overflow-x: hidden;
 		}
 
-		.panel {
+		.panel-old{
 			width: 2000px;
 			float: left;
 			padding-left: 30px;
 			padding-right: 1040px;
 			padding-top:45px;
 			background: #eee;
+		}
+
+		.panel {
+	        width: 100%;
+	        padding-top:45px;
+			background: white;
+		}
+
+		.home-panel {
 		}
 
 		#banner {

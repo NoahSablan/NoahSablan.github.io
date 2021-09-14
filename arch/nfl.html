@@ -19,32 +19,31 @@
     <link rel="stylesheet" href="../static/home.css">
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="../static/home.js"></script>
 
   </head>
   <body>
-    <div id="banner" class="navbar navbar-default navbar-static-top">
-      <a class="home-button" href="../">Noah Sablan</a>
-      <ul>
-				<li>
-					<a href="../3D/">3D</a>
-				</li>
-				<li>
-					<a href="../ui-ux/">UI/UX</a>
-				</li>
-                <li>
-					<a href="../product/">PRODUCT</a>
-				</li>
-				<li>
-					<a href="./">ARCH</a>
-				</li>
-
-			</ul>
-
-        </div>
-
+<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="../index.html">Noah Sablan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarXs">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="collapsingNavbarXs">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../3D/">3D</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../ui-ux/">UI-UX</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./">Architecture</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../product/">Product</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
     <div id="ARCH" class = "panel">
     <div class="container">
@@ -54,11 +53,11 @@
 
       <div class="spacer"></div>
       <div class="row standard-margin project-showcase">
-        <div class="col-6 title">
+        <div class="col-md-6 col-sm-12 title">
           Newburgh Free Library
           <h2>May 2019</h2>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           The city of Newburgh, which lies in the Hudson valley, is currently looking for ways to revitalize local
           culture and celebrate their community. The local Newburgh Free Library offered to collaborate with ideas
           that would be presented to the head librarians to draw the community to the library in new ways.
@@ -68,7 +67,7 @@
 
       <!--NEWBURGH-->
       <div class="row standard-margin project-showcase">
-        <div class="col">
+        <div class="col-md-12 col-sm-12">
           <img src="./media/newburgh-1.png" class="image-showcase mx-auto" alt="Newburgh library cone intervention.">
         </div>
       </div>
@@ -86,43 +85,43 @@
       </div>
 
       <div class="row standard-margin project-showcase">
-        <div class="col">
+        <div class="col-md-12 col-sm-12">
           <img src="./media/newburgh-2.JPG" class="image-showcase mx-auto" alt="Newburgh library collage.">
         </div>
       </div>
 
       <div class="row standard-margin project-showcase">
-        <div class="col">
+        <div class="col-md-12 col-sm-12">
           <img src="./media/newburgh-9.JPG" class="image-showcase mx-auto" alt="Paper model configuration 1.">
         </div>
       </div>
 
       <div class="row standard-margin project-showcase">
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12pb-3">
          <img src="./media/newburgh-3.jpg" class="image-showcase mx-auto" alt="Paper model configuration 2.">
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           <img src="./media/newburgh-4.jpg" class="image-showcase mx-auto" alt="Paper model configuration 3.">
         </div>
       </div>
 
       <div class="row standard-margin project-showcase">
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12 pb-3">
          <img src="./media/newburgh-5.png" class="image-showcase mx-auto" alt="Google maps view with cone 1.">
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           <img src="./media/newburgh-6.png" class="image-showcase mx-auto" alt="Google maps view with cone 2.">
         </div>
       </div>
 
       <div class="row standard-margin project-showcase">
-        <div class="col">
+        <div class="col-md-12 col-sm-12 pb-3">
           <img src="./media/newburgh-7.png" class="image-showcase mx-auto" alt="Rhino rendering of cone.">
         </div>
       </div>
 
       <div class="row standard-margin project-showcase">
-        <div class="col">
+        <div class="col-md-12 col-sm-12">
           <img src="./media/newburgh-8.jpg" class="image-showcase mx-auto" alt="Final cone design.">
         </div>
       </div>
@@ -137,5 +136,14 @@
 
 
 
+<!-- JQUERY AND POPPER before bootstrap.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
+<!-- Bootstrap JS -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Custom JS -->
+    <script src="../static/home.js"></script>
   </body>
+</html>

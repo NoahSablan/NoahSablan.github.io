@@ -25,25 +25,28 @@
 
   </head>
   <body>
-    <div id="banner" class="navbar navbar-default navbar-static-top">
-      <a class="home-button" href="../">Noah Sablan</a>
-      <ul>
-				<li>
-					<a href="../3D/">3D</a>
-				</li>
-				<li>
-					<a href="./">UI/UX</a>
-				</li>
-                <li>
-					<a href="../product/">PRODUCT</a>
-				</li>
-				<li>
-					<a href="../arch/">ARCH</a>
-				</li>
-
-			</ul>
-
-        </div>
+<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="../index.html">Noah Sablan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarXs">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="collapsingNavbarXs">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../3D/">3D</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./">UI-UX</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../arch/">Architecture</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../product/">Product</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
   <div id="UI-UX" class = "panel">
     <div class="container">
@@ -52,22 +55,22 @@
 
       <div class="spacer"></div>
       <div class="row standard-margin project-showcase">
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           <div class="title">Ambient</div>
-          <h2>Covid Design Challenge</h2>
-          <h2>April 2020</h2>
+          <h4>Covid Design Challenge</h4>
+          <h4>April 2020</h4>
           <p>Due to COVID-19, in March of 2020, students everywhere were forced to disperse across the
             globe and leave their campuses, the Covid Design Challenge was conceived to gain ideas on how to maintain our community through virtual campus
             experiences. The three day design challenge was meant to address challenges to our mental health, motivation,
             concentration and resources as students.</p>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
            <img src="./media/ambient-1.png" class="image-showcase mx-auto" alt="Ambient sound page">
         </div>
       </div>
 
       <div class="row standard-margin project-showcase">
-        <div class="col">
+        <div class="col-md-12 col-sm-12">
           <div>
             "In light of recent events, most of the normal campus activities have been suspended,
             but we can still maintain our community through virtual campus experiences."
@@ -78,18 +81,18 @@
 
       <div class="spacer"></div>
       <div class="row standard-margin project-showcase">
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12 pb-3">
           <img src="./media/ambient-2.jpg" class="image-showcase mx-auto" alt="Ambient brainstorming diagram.">
 
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           <img src="./media/ambient-3.png" class="image-showcase mx-auto" alt="Ambient feedback pop-up.">
 
         </div>
       </div>
 
             <div class="row standard-margin project-showcase">
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           <div>
             At the outset, I was inspired by ambient loops that I often listened to that simulated the experience of
             being somewhere I wasn’t. I liked to listen to the ones where I was by the beach, listening to the crashing
@@ -97,7 +100,7 @@
             user as well as provide the user the ability to simulate a space that is conducive to productivity.
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           <div>
             I began by cataloging various soundscapes around campus from my experience. I was able to organize and
             create descriptions of what soundbites would be prevalent in each of the spaces. For example, in one of my
@@ -136,6 +139,14 @@
 
 
 
+<!-- JQUERY AND POPPER before bootstrap.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
+<!-- Bootstrap JS -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Custom JS -->
+    <script src="../static/home.js"></script>
   </body>
 </html>

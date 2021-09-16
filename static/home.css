@@ -288,6 +288,11 @@
 
         }
 
+        .size-gif{
+            height:420px;
+            width:420px;
+        }
+
         .a-r-1 {
             width: 100%;
             height: 100%;

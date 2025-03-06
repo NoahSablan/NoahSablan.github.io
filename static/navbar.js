@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="navbar-collapse collapse" id="collapsingNavbarXs">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="./index.html">Projects</a>
+              <a class="nav-link" href="/NoahSablan.github.io/3D/index.html">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contact-me.html">Contact</a>
+              <a class="nav-link" href="/NoahSablan.github.io/3D/contact-me.html">Contact</a>
             </li>
             <!--
             <li class="nav-item">

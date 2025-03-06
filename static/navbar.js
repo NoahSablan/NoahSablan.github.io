@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const navbarHTML = `
       <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="./index.html">Noah Sablan</a>
+        <a class="navbar-brand" href="/NoahSablan.github.io/index.html">Noah Sablan</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarXs">
           <span class="navbar-toggler-icon"></span>
         </button>

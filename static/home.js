@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
   const sections = document.querySelectorAll('.section');
-  const container = document.querySelector('.container');
+  const container = document.querySelector('.gallery');
   
   function updateBackgrounds() {
       const width = window.innerWidth;
@@ -23,54 +23,86 @@ $(document).ready(function(){
           }
       });
   }
+// Function to check if section is in view
+function checkSectionVisibility() {
+  const isMobile = window.innerWidth <= 768;
   
-  // Prevent scrolling past boundaries
-  function preventOverscroll() {
-      container.addEventListener('wheel', (e) => {
-          const { scrollTop, scrollHeight, clientHeight } = container;
+  if (isMobile) {
+      sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          const isInView = (
+              rect.top >= 0 &&
+              rect.left >= 0 &&
+              rect.bottom <= window.innerHeight &&
+              rect.right <= window.innerWidth
+          );
           
-          // At the top and trying to scroll up
-          if (scrollTop <= 0 && e.deltaY < 0) {
-              e.preventDefault();
+          if (isInView) {
+              section.classList.add('in-view');
+              console.log("IN VIew, world!"); // Outputs "Hello, world!" to the console
+          } else {
+              section.classList.remove('in-view');
+              console.log("NOTINVIEW, world!"); // Outputs "Hello, world!" to the console
           }
-          
-          // At the bottom and trying to scroll down
-          if (scrollTop + clientHeight >= scrollHeight && e.deltaY > 0) {
-              e.preventDefault();
-          }
-      }, { passive: false });
-      
-      // Prevent touch overscroll for mobile
-      container.addEventListener('touchstart', (e) => {
-          startY = e.touches[0].clientY;
-      }, { passive: false });
-      
-      container.addEventListener('touchmove', (e) => {
-          const { scrollTop, scrollHeight, clientHeight } = container;
-          const currentY = e.touches[0].clientY;
-          const direction = startY - currentY;
-          
-          // Scrolling up at the top
-          if (scrollTop <= 0 && direction < 0) {
-              e.preventDefault();
-          }
-          
-          // Scrolling down at the bottom
-          if (scrollTop + clientHeight >= scrollHeight && direction > 0) {
-              e.preventDefault();
-          }
-      }, { passive: false });
+      });
   }
+}
+
+// Prevent scrolling past boundaries
+function preventOverscroll() {
+  container.addEventListener('wheel', (e) => {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      
+      // At the top and trying to scroll up
+      if (scrollTop <= 0 && e.deltaY < 0) {
+          e.preventDefault();
+      }
+      
+      // At the bottom and trying to scroll down
+      if (scrollTop + clientHeight >= scrollHeight && e.deltaY > 0) {
+          e.preventDefault();
+      }
+  }, { passive: false });
   
-  // Set backgrounds on page load
+  // Prevent touch overscroll for mobile
+  container.addEventListener('touchstart', (e) => {
+      startY = e.touches[0].clientY;
+  }, { passive: false });
+  
+  container.addEventListener('touchmove', (e) => {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const currentY = e.touches[0].clientY;
+      const direction = startY - currentY;
+      
+      // Scrolling up at the top
+      if (scrollTop <= 0 && direction < 0) {
+          e.preventDefault();
+      }
+      
+      // Scrolling down at the bottom
+      if (scrollTop + clientHeight >= scrollHeight && direction > 0) {
+          e.preventDefault();
+      }
+  }, { passive: false });
+}
+
+// Set backgrounds on page load
+updateBackgrounds();
+
+// Set up scroll prevention
+let startY;
+preventOverscroll();
+
+// Add scroll event listener to detect when sections come into view
+container.addEventListener('scroll', checkSectionVisibility);
+window.addEventListener('resize', () => {
   updateBackgrounds();
-  
-  // Set up scroll prevention
-  let startY;
-  preventOverscroll();
-  
-  // Update backgrounds when window is resized
-  window.addEventListener('resize', updateBackgrounds);
+  checkSectionVisibility();
+});
+
+// Initial check for visible sections
+checkSectionVisibility();
+
 
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {

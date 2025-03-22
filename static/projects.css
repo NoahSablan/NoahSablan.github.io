@@ -24,12 +24,11 @@ body {
     overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-snap-stop: always;
-    /* scrollbar-width: none; */
 }
-
 .gallery::-webkit-scrollbar {
     /* display: none; */
 }
+
 
 .section {
     position: relative;
@@ -67,16 +66,49 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Left alignment */
-    padding: 10% 15%; /* Offset from left edge */
+    align-items: flex-start;
+    padding: 10% 15%;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     color: white;
-    text-align: left; /* Left alignment */
+    text-align: left;
 }
 
-.section:hover .overlay {
-    opacity: 1;
+/* Desktop hover behavior */
+@media (min-width: 769px) {
+    .section:hover .overlay {
+        opacity: 1;
+    }
+    
+    .section:hover .title,
+    .section:hover .subtitle,
+    .section:hover .cta-button {
+        transform: translateY(0);
+    }
+}
+
+/* Mobile/small screen auto-reveal with delay */
+.section.in-view .overlay {
+    opacity: 0;
+    animation: fadeInOverlay 0.3s ease-in-out forwards;
+    animation-delay: 0.2s; /* 0.2 second delay as requested */
+}
+
+.section.in-view .title,
+.section.in-view .subtitle,
+.section.in-view .cta-button {
+    animation: slideUpContent 0.4s ease-out forwards;
+    animation-delay: 0.3s; /* Slightly longer delay for content */
+}
+
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUpContent {
+    from { transform: translateY(20px); }
+    to { transform: translateY(0); }
 }
 
 .title {
@@ -96,12 +128,6 @@ body {
     text-align: left;
     max-width: 80%;
     margin-bottom: 2rem;
-}
-
-.section:hover .title,
-.section:hover .subtitle,
-.section:hover .cta-button {
-    transform: translateY(0);
 }
 
 .cta-button {

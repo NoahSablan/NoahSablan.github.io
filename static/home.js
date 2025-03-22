@@ -36,6 +36,8 @@ function checkSectionVisibility() {
               rect.bottom <= window.innerHeight &&
               rect.right <= window.innerWidth
           );
+
+          console.log("TOP="+rect.top, "LEFT="+rect.left, "BOTTOM=" + rect.bottom, "RIGHT=" + rect.right, "win.innerH" + window.innerHeight, "win.innerW" + window.innerWidth);
           
           if (isInView) {
               section.classList.add('in-view');

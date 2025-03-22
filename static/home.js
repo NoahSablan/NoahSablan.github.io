@@ -13,13 +13,13 @@ $(document).ready(function(){
           
           if (width < 600) {
               // Small screens (mobile)
-              background.style.backgroundImage = `url('${theme}')`; //<!-- add -sm to this -->
+              background.style.backgroundImage = `${theme}`; //<!-- add -sm to this -->
           } else if (width < 1024) {
               // Medium screens (tablet)
-              background.style.backgroundImage = `url('${theme}')`; // add -md to this
+              background.style.backgroundImage = `${theme}`; // add -md to this
           } else {
               // Large screens (desktop)
-              background.style.backgroundImage = `url('${theme}')`; // add -lg to this
+              background.style.backgroundImage = `${theme}`; // add -lg to this
           }
       });
   }

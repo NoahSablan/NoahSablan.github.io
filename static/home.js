@@ -37,14 +37,14 @@ function checkSectionVisibility() {
               rect.right <= window.innerWidth
           );
 
-          console.log("TOP="+rect.top, "LEFT="+rect.left, "BOTTOM=" + rect.bottom, "RIGHT=" + rect.right, "win.innerH" + window.innerHeight, "win.innerW" + window.innerWidth);
           
           if (isInView) {
               section.classList.add('in-view');
               console.log("IN VIew, world!"); // Outputs "Hello, world!" to the console
+              console.log("TOP="+rect.top, "LEFT="+rect.left, "BOTTOM=" + rect.bottom, "RIGHT=" + rect.right, "win.innerH" + window.innerHeight, "win.innerW" + window.innerWidth);
           } else {
               section.classList.remove('in-view');
-              console.log("NOTINVIEW, world!"); // Outputs "Hello, world!" to the console
+              // console.log("NOTINVIEW, world!"); // Outputs "Hello, world!" to the console
           }
       });
   }

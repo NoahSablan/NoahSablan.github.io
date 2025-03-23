@@ -23,32 +23,34 @@ $(document).ready(function(){
           }
       });
   }
-// Function to check if section is in view
-function checkSectionVisibility() {
-  const isMobile = window.innerWidth <= 768;
-  
-  if (isMobile) {
-      sections.forEach(section => {
-          const rect = section.getBoundingClientRect();
-          const isInView = (
-              rect.top >= 0 &&
-              rect.left >= 0 &&
-              rect.bottom <= window.innerHeight &&
-              rect.right <= window.innerWidth
-          );
-
-          
-          if (isInView) {
-              section.classList.add('in-view');
-              console.log("IN VIew, world!"); // Outputs "Hello, world!" to the console
-              console.log("TOP="+rect.top, "LEFT="+rect.left, "BOTTOM=" + rect.bottom, "RIGHT=" + rect.right, "win.innerH" + window.innerHeight, "win.innerW" + window.innerWidth);
-          } else {
-              section.classList.remove('in-view');
-              // console.log("NOTINVIEW, world!"); // Outputs "Hello, world!" to the console
-          }
-      });
+  function checkSectionVisibility() {
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            
+            // Center point check
+            const centerY = rect.top + (rect.height / 2);
+            
+            // Calculate how much of the element is visible vertically
+            const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+            const percentVisible = visibleHeight / rect.height;
+            
+            // Element is in view if center is visible OR if at least 75% is visible
+            const isInView = (
+                (centerY >= 0 && centerY <= window.innerHeight) ||
+                (percentVisible >= 0.75)
+            );
+            
+            if (isInView) {
+                section.classList.add('in-view');
+            } else {
+                section.classList.remove('in-view');
+            }
+        });
+    }
   }
-}
 
 // Prevent scrolling past boundaries
 function preventOverscroll() {

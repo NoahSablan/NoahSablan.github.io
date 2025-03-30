@@ -9,7 +9,7 @@ $(document).ready(function(){
       
       sections.forEach((section, index) => {
           const background = section.querySelector('.background');
-          const theme = ["../3D/media/NN-1.jpg", "../3D/media/quilt-2.jpg", "../arch/media/newburgh-2.JPG", "../3D/media/VRT-showcase.png", "../arch/media/flood-1.JPG", "../ui-ux/media/ambient-4.png", "../3D/media/dml-2.gif"][index % 7];
+          const theme = ["../3D/media/NN-1.jpg", "../3D/media/quilt-2.jpg", "../3D/media/Noguchi-7.png", "../arch/media/newburgh-2.JPG", "../3D/media/VRT-showcase.png", "../arch/media/flood-1.JPG", "../ui-ux/media/ambient-4.png", "../3D/media/dml-2.gif"][index % 7];
           
           if (width < 600) {
               // Small screens (mobile)
